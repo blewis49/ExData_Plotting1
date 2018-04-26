@@ -16,7 +16,7 @@ plot(feb07.pwr$date.time, feb07.pwr$Global_active_power, type = "l",
      xlab = "",
      ylab = "Global Active Power (kilowatts)")
 
-par(mfrow = c(2,2), mar = c(2,4,4,2))
+par(mfrow = c(2,2), mar = c(4,4,4,4))
 # Plot 1 ----upper left
 plot(feb07.pwr$date.time, feb07.pwr$Global_active_power, type = "l",
      xlab = "",
@@ -38,6 +38,7 @@ legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_
 
 # Plot 4 ----lower right
 plot(feb07.pwr$date.time, feb07.pwr$Global_reactive_power, type = "l",
+     xlab = "datetime",
      ylab = "Global_reactive_power")
 
 dev.copy(png, "plot4.png")
