@@ -12,11 +12,8 @@ feb07.pwr$Sub_metering_2 <- as.numeric(as.character(feb07.pwr$Sub_metering_2))
 feb07.pwr$Sub_metering_3 <- as.numeric(as.character(feb07.pwr$Sub_metering_3))
 feb07.pwr$Voltage <- as.numeric(as.character(feb07.pwr$Voltage))
 
-plot(feb07.pwr$date.time, feb07.pwr$Global_active_power, type = "l",
-     xlab = "",
-     ylab = "Global Active Power (kilowatts)")
-
-par(mfrow = c(2,2), mar = c(4,4,4,4))
+#set up the 2x2 frame for plots
+par(mfrow = c(2,2), mar = c(4,4,4,2))
 # Plot 1 ----upper left
 plot(feb07.pwr$date.time, feb07.pwr$Global_active_power, type = "l",
      xlab = "",
@@ -24,7 +21,8 @@ plot(feb07.pwr$date.time, feb07.pwr$Global_active_power, type = "l",
 # Plot 2 ----upper right
 plot(feb07.pwr$date.time, feb07.pwr$Voltage, type = "l", 
      xlab = "datetime", 
-     ylab = "Voltage")
+     ylab = "Voltage", 
+     mar = c(1,4,4,2))
 
 # Plot 3 ----lower left
 plot(feb07.pwr$date.time, feb07.pwr$Sub_metering_1, type = "n",
